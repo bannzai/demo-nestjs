@@ -3,8 +3,8 @@ import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 @Controller('cats')
 export class CatsController {
 
-  @Post
-  create(@Body createCatDto: CreateCatDto) {
+  @Post()
+  create(@Body() createCatDto) {
     return 'This action adds a new cat';
   }
 
